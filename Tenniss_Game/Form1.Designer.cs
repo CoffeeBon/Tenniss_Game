@@ -29,11 +29,103 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.TopBar = new System.Windows.Forms.Button();
+            this.BottomBar = new System.Windows.Forms.Button();
+            this.LeftBar = new System.Windows.Forms.Button();
+            this.RightBar = new System.Windows.Forms.Button();
+            this.Ball = new System.Windows.Forms.RadioButton();
+            this.Timer1 = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // TopBar
+            // 
+            this.TopBar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TopBar.Location = new System.Drawing.Point(359, 23);
+            this.TopBar.Name = "TopBar";
+            this.TopBar.Size = new System.Drawing.Size(290, 30);
+            this.TopBar.TabIndex = 0;
+            this.TopBar.Text = "T";
+            this.TopBar.UseVisualStyleBackColor = true;
+            this.TopBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopButton_MouseMove);
+            // 
+            // BottomBar
+            // 
+            this.BottomBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.BottomBar.Location = new System.Drawing.Point(359, 531);
+            this.BottomBar.Name = "BottomBar";
+            this.BottomBar.Size = new System.Drawing.Size(290, 30);
+            this.BottomBar.TabIndex = 1;
+            this.BottomBar.Text = "B";
+            this.BottomBar.UseVisualStyleBackColor = true;
+            this.BottomBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopButton_MouseMove);
+            // 
+            // LeftBar
+            // 
+            this.LeftBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LeftBar.Location = new System.Drawing.Point(12, 151);
+            this.LeftBar.Name = "LeftBar";
+            this.LeftBar.Size = new System.Drawing.Size(30, 290);
+            this.LeftBar.TabIndex = 2;
+            this.LeftBar.Text = "L";
+            this.LeftBar.UseVisualStyleBackColor = true;
+            this.LeftBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftButton_MouseMove);
+            // 
+            // RightBar
+            // 
+            this.RightBar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RightBar.Location = new System.Drawing.Point(967, 151);
+            this.RightBar.Name = "RightBar";
+            this.RightBar.Size = new System.Drawing.Size(30, 290);
+            this.RightBar.TabIndex = 3;
+            this.RightBar.Text = "R";
+            this.RightBar.UseVisualStyleBackColor = true;
+            this.RightBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LeftButton_MouseMove);
+            // 
+            // Ball
+            // 
+            this.Ball.AutoSize = true;
+            this.Ball.Checked = true;
+            this.Ball.Location = new System.Drawing.Point(232, 140);
+            this.Ball.Name = "Ball";
+            this.Ball.Size = new System.Drawing.Size(29, 16);
+            this.Ball.TabIndex = 4;
+            this.Ball.TabStop = true;
+            this.Ball.Text = "4";
+            this.Ball.UseVisualStyleBackColor = true;
+            // 
+            // Timer1
+            // 
+            this.Timer1.Enabled = true;
+            this.Timer1.Interval = 33;
+            this.Timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1009, 573);
+            this.Controls.Add(this.Ball);
+            this.Controls.Add(this.RightBar);
+            this.Controls.Add(this.LeftBar);
+            this.Controls.Add(this.BottomBar);
+            this.Controls.Add(this.TopBar);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button TopBar;
+        private System.Windows.Forms.Button BottomBar;
+        private System.Windows.Forms.Button LeftBar;
+        private System.Windows.Forms.Button RightBar;
+        private System.Windows.Forms.RadioButton Ball;
+        private System.Windows.Forms.Timer Timer1;
     }
 }
 
